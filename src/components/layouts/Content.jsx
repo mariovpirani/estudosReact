@@ -13,19 +13,44 @@ import Membros from '../tarefas/familia/membros/Membros'
 import Alunos from '../tarefas/alunos/Alunos'
 import AlunosTabela from '../tarefas/alunos/AlunosTabela'
 import BemVindo from '../tarefas/BemVindo'
+import DiretaPai from '../tarefas/comunicacao/DiretaPai'
+import IndiretaPai from '../tarefas/comunicacao/IndiretaPai'
+import Input from '../tarefas/formulario/Input'
+import './assets/content.scss'
+import Contador from '../tarefas/contador/Contador'
+import ContadorNovo from '../tarefas/contador/ContadorNovo'
+import Megasena from '../tarefas/megasena/Index'
 
 export default function content() {
     return (
-        <div>
+        <div className='content'>
             <Switch>
                 <Route path="/calculadora">
                     <Calculadora />
+                </Route>
+                <Route exact path="/contador">
+                    <Contador numeroInicial={100} />
+                </Route>
+                <Route exact path="/megasena">
+                    <Megasena />
+                </Route>
+                <Route path="/contador/novo">
+                    <ContadorNovo numeroInicial={50} />
                 </Route>
                 <Route path="/alunos/tabela">
                     <AlunosTabela />
                 </Route>
                 <Route exact path="/alunos">
                     <Alunos />
+                </Route>
+                <Route path="/comunicacaodireta">
+                    <DiretaPai />
+                </Route>
+                <Route path="/comunicacaoindireta">
+                    <IndiretaPai />
+                </Route>
+                <Route path="/input">
+                    <Input />
                 </Route>
                 <Route path="/familia/dinamica">
                     <FamiliaDinamica sobrenome="Oeste">

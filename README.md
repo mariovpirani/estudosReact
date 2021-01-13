@@ -1,1 +1,3 @@
-# estudosReact
+# estudando React do zero
+
+## Instalar
