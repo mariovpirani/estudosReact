@@ -32,8 +32,8 @@ export default function Megasena(){
     return (
         <div>
             <h3>Megasena</h3>
-            <strong>Quantidade de números</strong> <FormNumeros numero={quantidade} setQuantidade={setQuantidade} /><br />
-            <strong>Número máximo</strong> <NumeroMaximo numero={maximo} setMaximo={setMaximo} /><br />
+            <strong>Quantidade de números</strong> <FormNumeros numero={quantidade}  setQuantidade={setQuantidade} /><br />
+            <strong>Número máximo</strong> <NumeroMaximo numero={maximo} setNumeros={gerarNumeroAleatorios} setMaximo={setMaximo} /><br />
             <h3>Números Gerados</h3>
             <div className="cards">
                 {lista}
