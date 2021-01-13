@@ -22,7 +22,7 @@ export default function Megasena(){
     function gerarNumeroAleatorios() {
         var numerosGerados = []
         while (numerosGerados.length < quantidade) {
-            var aleatorio = Math.floor(Math.random() * maximo)
+            var aleatorio = Math.floor(Math.random() * (maximo - 1) + 1)
             if (numerosGerados.indexOf(aleatorio) === -1) {
                 numerosGerados.push(aleatorio)
             }
